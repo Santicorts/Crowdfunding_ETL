@@ -16,15 +16,15 @@ CREATE TABLE "campaigns" (
     "currency" varchar   NOT NULL,
     "launch_date" date   NOT NULL,
     "end_date" date   NOT NULL,
-    "sub_category_id" int   NOT NULL,
-    "category_id" int   NOT NULL,
+    "sub_category_id" varchar   NOT NULL,
+    "category_id" varchar   NOT NULL,
     CONSTRAINT "pk_campaigns" PRIMARY KEY (
         "cf_id"
      )
 );
 
 CREATE TABLE "categories" (
-    "category_id" int   NOT NULL,
+    "category_id" varchar   NOT NULL,
     "category" varchar   NOT NULL,
     CONSTRAINT "pk_categories" PRIMARY KEY (
         "category_id"
@@ -42,7 +42,7 @@ CREATE TABLE "contacts" (
 );
 
 CREATE TABLE "subcategories" (
-    "sub_category_id" int   NOT NULL,
+    "sub_category_id" varchar   NOT NULL,
     "sub_category" varchar   NOT NULL,
     CONSTRAINT "pk_subcategories" PRIMARY KEY (
         "sub_category_id"
